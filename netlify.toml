@@ -1,0 +1,9 @@
+[build]
+  command = "NODE_OPTIONS='--max-old-space-size=4096' pnpm exec gatsby build"
+  publish = "public"
+
+[build.environment]
+  NODE_VERSION = "22"
+  NPM_FLAGS = "--version"
+  PNPM_VERSION = "10.23.0"
+  GATSBY_CPU_COUNT = "1"
