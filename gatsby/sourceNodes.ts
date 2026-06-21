@@ -156,11 +156,15 @@ export const sourceNodes: GatsbyNode['sourceNodes'] = async ({ actions, createCo
     const { createNode } = actions
 
     const openApiSpecUrl = process.env.POSTHOG_OPEN_API_SPEC_URL || 'https://app.posthog.com/api/schema/'
-    const spec = await fetch(openApiSpecUrl, {
-        headers: {
-            Accept: 'application/json',
-        },
-    }).then((res) => res.json())
+    let spec: any = { paths: {}, components: { schemas: {} } }
+    try {
+        spec = await fetch(openApiSpecUrl, {
+            headers: { Accept: 'application/json' },
+        }).then((res) => res.json())
+    } catch (e) {
+        console.warn('Could not fetch OpenAPI spec, skipping API docs nodes:', e.message)
+        return
+    }
 
     const parser = new OpenAPIParser(spec)
     const menu = MenuBuilder.buildStructure(parser, {} as any)
@@ -913,9 +917,16 @@ export const sourceNodes: GatsbyNode['sourceNodes'] = async ({ actions, createCo
             type: 'transformation' | 'destination' | 'source_webhook',
             generateSlug: (pipeline: any) => string
         ) => {
-            const { results } = await fetch(
-                `https://us.posthog.com/api/public_hog_function_templates?type=${type}&limit=350`
-            ).then((res) => res.json())
+            let results: any[] = []
+            try {
+                const data = await fetch(
+                    `https://us.posthog.com/api/public_hog_function_templates?type=${type}&limit=350`
+                ).then((res) => res.json())
+                results = data.results || []
+            } catch (e) {
+                console.warn(`Could not fetch PostHog pipelines (${type}), skipping:`, e.message)
+                return
+            }
             await Promise.all(
                 results.map(async (pipeline) => {
                     let additionalData = {}
@@ -985,9 +996,15 @@ export const sourceNodes: GatsbyNode['sourceNodes'] = async ({ actions, createCo
     }
 
     const fetchWorkflowTemplates = async () => {
-        const data = await fetch('https://us.posthog.com/api/public_hog_flow_templates?limit=350').then((res) =>
-            res.json()
-        )
+        let data: any = { results: [] }
+        try {
+            data = await fetch('https://us.posthog.com/api/public_hog_flow_templates?limit=350').then((res) =>
+                res.json()
+            )
+        } catch (e) {
+            console.warn('Could not fetch workflow templates, skipping:', e.message)
+            return
+        }
         data.results.forEach((template) => {
             const node = {
                 id: createNodeId(`posthog-workflow-template-${template.id}`),

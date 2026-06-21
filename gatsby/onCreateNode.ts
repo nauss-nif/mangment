@@ -67,6 +67,10 @@ async function getTemplateList() {
                 return res.json()
             })
             .then((body) => body.results)
+            .catch((e) => {
+                console.warn('Could not fetch hog function templates:', e.message || e)
+                return []
+            })
     }
     return templateListPromise
 }
