@@ -12,7 +12,7 @@ const html = `<!doctype html>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Management</title>
-  <meta name="description" content="Management website is being prepared." />
+  <meta name="description" content="منصة لإدارة الأعمال والفرق والمهام من مكان واحد." />
   <style>
     :root {
       color-scheme: dark;
@@ -29,9 +29,7 @@ const html = `<!doctype html>
     body {
       margin: 0;
       min-height: 100vh;
-      display: grid;
-      place-items: center;
-      overflow: hidden;
+      overflow-x: hidden;
       background:
         radial-gradient(circle at 20% 20%, rgba(255, 138, 61, 0.22), transparent 28rem),
         radial-gradient(circle at 82% 76%, rgba(245, 234, 215, 0.12), transparent 24rem),
@@ -41,7 +39,8 @@ const html = `<!doctype html>
     }
 
     main {
-      width: min(92vw, 820px);
+      width: min(92vw, 1120px);
+      margin: 7vh auto;
       padding: clamp(28px, 6vw, 72px);
       position: relative;
       border: 1px solid var(--line);
@@ -57,6 +56,26 @@ const html = `<!doctype html>
       border: 1px dashed rgba(245, 234, 215, 0.18);
       border-radius: 22px;
       pointer-events: none;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: clamp(48px, 8vw, 96px);
+    }
+
+    .brand {
+      font: 800 22px/1 ui-monospace, SFMono-Regular, Consolas, monospace;
+      letter-spacing: -0.04em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 22px;
+      color: var(--muted);
+      font: 700 14px/1.2 ui-monospace, SFMono-Regular, Consolas, monospace;
     }
 
     .eyebrow {
@@ -80,8 +99,8 @@ const html = `<!doctype html>
 
     h1 {
       margin: 0;
-      max-width: 12ch;
-      font-size: clamp(48px, 10vw, 104px);
+      max-width: 13ch;
+      font-size: clamp(48px, 9vw, 112px);
       line-height: 0.92;
       letter-spacing: -0.06em;
     }
@@ -94,8 +113,63 @@ const html = `<!doctype html>
       line-height: 1.75;
     }
 
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 36px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      padding: 0 22px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      color: var(--ink);
+      text-decoration: none;
+      font: 800 15px/1 ui-monospace, SFMono-Regular, Consolas, monospace;
+      background: rgba(245, 234, 215, 0.06);
+    }
+
+    .button.primary {
+      border-color: transparent;
+      background: var(--accent);
+      color: #1b0f07;
+      box-shadow: 0 18px 40px rgba(255, 138, 61, 0.25);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: clamp(48px, 8vw, 86px);
+    }
+
+    .card {
+      min-height: 170px;
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: rgba(245, 234, 215, 0.04);
+    }
+
+    .card strong {
+      display: block;
+      margin-bottom: 14px;
+      font-size: 22px;
+    }
+
+    .card span {
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
     .footer {
-      margin-top: 42px;
+      margin-top: 56px;
       padding-top: 22px;
       border-top: 1px solid var(--line);
       color: rgba(245, 234, 215, 0.62);
@@ -103,14 +177,42 @@ const html = `<!doctype html>
       direction: ltr;
       text-align: left;
     }
+
+    @media (max-width: 760px) {
+      nav { align-items: flex-start; }
+      .nav-links { display: none; }
+      .cards { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
   <main>
-    <div class="eyebrow"><span class="dot"></span> Deployment online</div>
-    <h1>الموقع قيد التجهيز</h1>
-    <p>تم نشر نسخة خفيفة مؤقتة بنجاح. سنعيد تشغيل النسخة الكاملة بعد ضبط حدود البناء والموارد المناسبة.</p>
-    <div class="footer">Temporary Vercel lite build</div>
+    <nav>
+      <div class="brand">Management</div>
+      <div class="nav-links">
+        <span>الرئيسية</span>
+        <span>الخدمات</span>
+        <span>تواصل معنا</span>
+      </div>
+    </nav>
+
+    <section>
+      <div class="eyebrow"><span class="dot"></span> منصة إدارة الأعمال</div>
+      <h1>نظّم عملك بثقة ووضوح</h1>
+      <p>حل بسيط لإدارة المهام، متابعة الفريق، وترتيب أولويات العمل من مكان واحد بسرعة وبدون تعقيد.</p>
+      <div class="actions">
+        <a class="button primary" href="mailto:hello@example.com">ابدأ الآن</a>
+        <a class="button" href="#features">استعرض المميزات</a>
+      </div>
+    </section>
+
+    <section id="features" class="cards">
+      <div class="card"><strong>إدارة المهام</strong><span>قسّم العمل، تابع التنفيذ، واعرف حالة كل مهمة بوضوح.</span></div>
+      <div class="card"><strong>متابعة الفريق</strong><span>رؤية واحدة لكل الأعضاء والإنجازات والأولويات اليومية.</span></div>
+      <div class="card"><strong>تقارير مختصرة</strong><span>مؤشرات سهلة تساعدك على اتخاذ القرار بسرعة.</span></div>
+    </section>
+
+    <div class="footer">Published on Vercel</div>
   </main>
 </body>
 </html>
