@@ -69,18 +69,26 @@ module.exports = {
     },
     trailingSlash: 'never',
     plugins: [
-        {
-            resolve: `gatsby-source-ashby`,
-            options: {
-                apiKey: process.env.ASHBY_API_KEY,
-            },
-        },
-        {
-            resolve: `gatsby-source-squeak`,
-            options: {
-                apiHost: process.env.GATSBY_SQUEAK_API_HOST,
-            },
-        },
+        ...(process.env.ASHBY_API_KEY
+            ? [
+                  {
+                      resolve: `gatsby-source-ashby`,
+                      options: {
+                          apiKey: process.env.ASHBY_API_KEY,
+                      },
+                  },
+              ]
+            : []),
+        ...(process.env.GATSBY_SQUEAK_API_HOST
+            ? [
+                  {
+                      resolve: `gatsby-source-squeak`,
+                      options: {
+                          apiHost: process.env.GATSBY_SQUEAK_API_HOST,
+                      },
+                  },
+              ]
+            : []),
         {
             resolve: `gatsby-mapbox-locations`,
             options: {
