@@ -78,6 +78,11 @@ const html = `<!doctype html>
       font: 700 14px/1.2 ui-monospace, SFMono-Regular, Consolas, monospace;
     }
 
+    .nav-links a {
+      color: inherit;
+      text-decoration: none;
+    }
+
     .eyebrow {
       display: inline-flex;
       gap: 10px;
@@ -190,9 +195,9 @@ const html = `<!doctype html>
     <nav>
       <div class="brand">Management</div>
       <div class="nav-links">
-        <span>الرئيسية</span>
-        <span>الخدمات</span>
-        <span>تواصل معنا</span>
+        <a href="/">الرئيسية</a>
+        <a href="/services/">الخدمات</a>
+        <a href="/contact/">تواصل معنا</a>
       </div>
     </nav>
 
@@ -201,8 +206,8 @@ const html = `<!doctype html>
       <h1>نظّم عملك بثقة ووضوح</h1>
       <p>حل بسيط لإدارة المهام، متابعة الفريق، وترتيب أولويات العمل من مكان واحد بسرعة وبدون تعقيد.</p>
       <div class="actions">
-        <a class="button primary" href="mailto:hello@example.com">ابدأ الآن</a>
-        <a class="button" href="#features">استعرض المميزات</a>
+        <a class="button primary" href="/contact/">ابدأ الآن</a>
+        <a class="button" href="/services/">استعرض الخدمات</a>
       </div>
     </section>
 
@@ -220,5 +225,55 @@ const html = `<!doctype html>
 
 fs.writeFileSync(path.join(publicDir, 'index.html'), html)
 fs.writeFileSync(path.join(publicDir, 'robots.txt'), 'User-agent: *\nDisallow:\n')
+
+const page = ({ title, description, body }) => `<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>${title} | Management</title>
+  <meta name="description" content="${description}" />
+  <style>
+    :root { color-scheme: dark; --bg: #11110f; --ink: #f5ead7; --muted: #b9aa93; --line: #3a3024; --accent: #ff8a3d; }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; background: radial-gradient(circle at 20% 20%, rgba(255, 138, 61, .2), transparent 28rem), linear-gradient(135deg, #0c0b0a, var(--bg)); color: var(--ink); font-family: Georgia, 'Times New Roman', serif; }
+    main { width: min(92vw, 980px); margin: 7vh auto; padding: clamp(28px, 6vw, 64px); border: 1px solid var(--line); border-radius: 30px; background: rgba(27, 25, 21, .9); box-shadow: 0 28px 90px rgba(0,0,0,.45); }
+    nav { display: flex; justify-content: space-between; gap: 20px; margin-bottom: 70px; font: 800 15px/1 ui-monospace, SFMono-Regular, Consolas, monospace; }
+    nav a { color: var(--muted); text-decoration: none; margin-inline-start: 18px; }
+    h1 { margin: 0; font-size: clamp(46px, 8vw, 92px); line-height: .95; letter-spacing: -.05em; }
+    p { color: var(--muted); font-size: clamp(18px, 2.2vw, 24px); line-height: 1.8; }
+    .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 42px; }
+    .card { padding: 24px; border: 1px solid var(--line); border-radius: 22px; background: rgba(245,234,215,.04); }
+    .card strong { display: block; margin-bottom: 10px; font-size: 22px; }
+    .button { display: inline-flex; margin-top: 28px; min-height: 52px; padding: 0 22px; align-items: center; border-radius: 999px; background: var(--accent); color: #1b0f07; text-decoration: none; font: 800 15px/1 ui-monospace, SFMono-Regular, Consolas, monospace; }
+    @media (max-width: 760px) { .grid { grid-template-columns: 1fr; } nav { display: block; } nav div:last-child { margin-top: 18px; } }
+  </style>
+</head>
+<body><main><nav><div>Management</div><div><a href="/">الرئيسية</a><a href="/services/">الخدمات</a><a href="/contact/">تواصل معنا</a></div></nav>${body}</main></body>
+</html>`
+
+const writePage = (route, content) => {
+    const dir = path.join(publicDir, route)
+    fs.mkdirSync(dir, { recursive: true })
+    fs.writeFileSync(path.join(dir, 'index.html'), content)
+}
+
+writePage(
+    'services',
+    page({
+        title: 'الخدمات',
+        description: 'خدمات إدارة الأعمال والمهام والفرق.',
+        body: `<h1>خدمات تساعدك على السيطرة على العمل</h1><p>نقدم حلولًا واضحة لإدارة المهام، متابعة الفريق، وتنظيم التقارير اليومية.</p><section class="grid"><div class="card"><strong>تنظيم المهام</strong><p>ترتيب العمل حسب الأولوية والمسؤول والموعد.</p></div><div class="card"><strong>متابعة الأداء</strong><p>صورة مختصرة عن تقدم الفريق والإنجاز.</p></div><div class="card"><strong>تخطيط المشاريع</strong><p>تقسيم المشروع إلى مراحل قابلة للمتابعة.</p></div><div class="card"><strong>تقارير تنفيذية</strong><p>ملخصات سهلة تساعد في اتخاذ القرار.</p></div></section><a class="button" href="/contact/">اطلب الخدمة</a>`,
+    })
+)
+
+writePage(
+    'contact',
+    page({
+        title: 'تواصل معنا',
+        description: 'تواصل معنا لبدء تنظيم عملك.',
+        body: `<h1>ابدأ بتنظيم عملك اليوم</h1><p>راسلنا وسنساعدك في اختيار أفضل طريقة لإدارة أعمالك وفريقك.</p><a class="button" href="mailto:hello@example.com">hello@example.com</a>`,
+    })
+)
 
 console.log('Created lightweight Vercel build in public/')
