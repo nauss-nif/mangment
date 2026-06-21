@@ -1,0 +1,13 @@
+╔════════════════════════════════════════════════════════════════════════╗
+║                                                                        ║
+║   Gatsby collects anonymous usage analytics                            ║
+║   to help improve Gatsby for all users.                                ║
+║                                                                        ║
+║   If you'd like to opt-out, you can use `gatsby telemetry --disable`   ║
+║   To learn more, checkout https://gatsby.dev/telemetry                 ║
+║                                                                        ║
+╚════════════════════════════════════════════════════════════════════════╝
+
+Something is already running at port 8001
+
+[?25l[2K[1G[36m?[39m [1mWould you like to run the app at another port instead?[22m [90m»[39m [90m(Y/n)[39m

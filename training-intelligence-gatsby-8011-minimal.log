@@ -1,0 +1,87 @@
+warn No Algolia keys present in environment, skipping sending information to
+algolia
+
+warn [baseline-browser-mapping] The data in this module is over two months old.
+ To ensure accurate Baseline data, please update: `npm i
+baseline-browser-mapping@latest -D`
+
+[2K[1A[2K[Gsuccess compile gatsby files - 98.206s
+
+[2K[1A[2K[Gwarn No Algolia keys present in environment, skipping sending information to
+algolia
+
+[2K[1A[2K[Gsuccess load gatsby config - 0.300s
+
+[2K[1A[2K[Gsuccess load plugins - 7.566s
+
+[2K[1A[2K[Gwarn gatsby-plugin-react-helmet: Gatsby now has built-in support for modifying
+the document head. Learn more at https://gatsby.dev/gatsby-head
+
+[2K[1A[2K[Gwarn Cloudinary credentials not found
+
+[2K[1A[2K[Gsuccess onPreInit - 0.036s
+
+[2K[1A[2K[Gsuccess initialize cache - 0.426s
+
+[2K[1A[2K[Gsuccess copy gatsby files - 2.149s
+
+[2K[1A[2K[Gsuccess Compiling Gatsby Functions - 2.378s
+
+[2K[1A[2K[G🎬 Enriching video data with metadata from APIs...
+
+[2K[1A[2K[Gwarn YOUTUBE_API_KEY not set, skipping YouTube title fetch
+
+[2K[1A[2K[G✅ Enriched 4 videos, saved to public/videos-metadata.json
+
+[2K[1A[2K[Gsuccess onPreBootstrap - 3.878s
+
+[2K[1A[2K[Gsuccess createSchemaCustomization - 0.053s
+
+[2K[1A[2K[G
+ ERROR
+
+gatsby-source-ashby: Missing options.apiKey
+
+
+warn [baseline-browser-mapping] The data in this module is over two months old.
+ To ensure accurate Baseline data, please update: `npm i
+baseline-browser-mapping@latest -D`
+
+warn [baseline-browser-mapping] The data in this module is over two months old.
+ To ensure accurate Baseline data, please update: `npm i
+baseline-browser-mapping@latest -D`
+
+warn [baseline-browser-mapping] The data in this module is over two months old.
+ To ensure accurate Baseline data, please update: `npm i
+baseline-browser-mapping@latest -D`
+
+warn [baseline-browser-mapping] The data in this module is over two months old.
+ To ensure accurate Baseline data, please update: `npm i
+baseline-browser-mapping@latest -D`
+
+warn [baseline-browser-mapping] The data in this module is over two months old.
+ To ensure accurate Baseline data, please update: `npm i
+baseline-browser-mapping@latest -D`
+
+warn [baseline-browser-mapping] The data in this module is over two months old.
+ To ensure accurate Baseline data, please update: `npm i
+baseline-browser-mapping@latest -D`
+
+warn [baseline-browser-mapping] The data in this module is over two months old.
+ To ensure accurate Baseline data, please update: `npm i
+baseline-browser-mapping@latest -D`
+
+warn [baseline-browser-mapping] The data in this module is over two months old.
+ To ensure accurate Baseline data, please update: `npm i
+baseline-browser-mapping@latest -D`
+
+warn [baseline-browser-mapping] The data in this module is over two months old.
+ To ensure accurate Baseline data, please update: `npm i
+baseline-browser-mapping@latest -D`
+
+warn [baseline-browser-mapping] The data in this module is over two months old.
+ To ensure accurate Baseline data, please update: `npm i
+baseline-browser-mapping@latest -D`
+
+[2K[1A[2K[Gwarn No Mapbox access token provided
+

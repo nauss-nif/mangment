@@ -1,0 +1,33 @@
+# Q2 2026
+
+## Objective 1: Unify batch exports and real-time destinations
+
+### Motivation
+* Different UX between batch exports and real-time destinations is confusing.
+* Single API enables better integration with other tools.
+
+### What we’ll ship
+* Single API for real-time destinations and batch exports.
+* Real-time destinations powered by batch exports.
+
+## Objective 2: Reduce pipeline architecture technical debt
+
+### Motivation
+* Each destination has different support for different features
+* Useful abstractions not implemented across destinations
+
+### What we’ll ship
+* Scalable consumers for all destinations
+* Complexity handling across all batch export destinations (metrics, tracing, and alerting).
+* Support for new models: Split up persons into person properties and person distinct ids.
+* Shared abstractions over destination-specific types implemented everywhere.
+
+## Objective 3: Self-serve debugging
+
+### Motivation
+* We want to empower users to resolve their own issues faster, without needing support from PostHog.
+
+### What we'll ship
+* Exposing better metrics and logs to users.
+* MCP destinations skills.
+* More access via API to debugging tools and metrics.

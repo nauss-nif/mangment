@@ -1,0 +1,40 @@
+[2m12:37:03 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m Forced re-optimization of dependencies
+
+  [32m[1mVITE[22m v8.0.16[39m  [2mready in [0m[1m289[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://127.0.0.1:[1m8025[22m/[39m
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[2m12:47:39 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mC:/nif/mangment/src/components/TrainingIntelligence/TrainingIntelligenceApp.tsx[22m
+[2m12:47:50 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mC:/nif/mangment/src/components/TrainingIntelligence/TrainingIntelligenceApp.tsx[22m
+[2m12:48:50 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mC:/nif/mangment/src/components/TrainingIntelligence/TrainingIntelligenceApp.tsx[22m
+[2m12:50:06 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mC:/nif/mangment/src/components/TrainingIntelligence/TrainingIntelligenceApp.tsx[22m
+[2m1:37:49 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mC:/nif/mangment/src/components/TrainingIntelligence/TrainingIntelligenceApp.tsx[22m
+[2m1:38:36 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mC:/nif/mangment/src/components/TrainingIntelligence/TrainingIntelligenceApp.tsx[22m
+[2m1:39:11 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mC:/nif/mangment/src/components/TrainingIntelligence/TrainingIntelligenceApp.tsx[22m
+[2m1:39:28 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mC:/nif/mangment/src/components/TrainingIntelligence/TrainingIntelligenceApp.tsx[22m
+[2m1:40:43 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mC:/nif/mangment/src/components/TrainingIntelligence/TrainingIntelligenceApp.tsx[22m
+[2m1:41:26 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mC:/nif/mangment/src/components/TrainingIntelligence/TrainingIntelligenceApp.tsx[22m
+[2m1:41:43 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mC:/nif/mangment/src/components/TrainingIntelligence/TrainingIntelligenceApp.tsx[22m
+[2m4:55:03 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css[22m
+[2m4:55:26 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mC:/nif/mangment/src/components/TrainingIntelligence/TrainingIntelligenceApp.tsx[22m
+[2m4:55:55 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mC:/nif/mangment/src/components/TrainingIntelligence/TrainingIntelligenceApp.tsx[22m
+[2m4:56:20 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mC:/nif/mangment/src/components/TrainingIntelligence/TrainingIntelligenceApp.tsx[22m
+[2m5:54:27 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mC:/nif/mangment/src/components/TrainingIntelligence/TrainingIntelligenceApp.tsx[22m
+[2m5:54:42 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mC:/nif/mangment/src/components/TrainingIntelligence/TrainingIntelligenceApp.tsx[22m
+[2m5:55:01 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mC:/nif/mangment/src/components/TrainingIntelligence/TrainingIntelligenceApp.tsx[22m
+[2m5:55:21 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mC:/nif/mangment/src/components/TrainingIntelligence/TrainingIntelligenceApp.tsx[22m
+[2m5:55:26 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [optimizer] bundling dependencies...
+[2m5:55:27 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32m✨ new dependencies optimized: [33mframer-motion[32m[39m
+[2m5:56:29 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mC:/nif/mangment/src/components/TrainingIntelligence/TrainingIntelligenceApp.tsx[22m
+[2m5:57:04 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mC:/nif/mangment/src/components/TrainingIntelligence/TrainingIntelligenceApp.tsx[22m
+[2m6:22:04 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mC:/nif/mangment/src/components/TrainingIntelligence/TrainingIntelligenceApp.tsx[22m
+[2m6:22:37 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mC:/nif/mangment/src/components/TrainingIntelligence/TrainingIntelligenceApp.tsx[22m
+[2m6:22:52 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mC:/nif/mangment/src/components/TrainingIntelligence/TrainingIntelligenceApp.tsx[22m
+[2m7:00:47 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mC:/nif/mangment/src/components/TrainingIntelligence/TrainingIntelligenceApp.tsx[22m
+[2m7:00:54 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mC:/nif/mangment/src/components/TrainingIntelligence/TrainingIntelligenceApp.tsx[22m
+[2m7:02:17 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mC:/nif/mangment/src/components/TrainingIntelligence/TrainingIntelligenceApp.tsx[22m
+[2m7:02:41 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mC:/nif/mangment/src/components/TrainingIntelligence/TrainingIntelligenceApp.tsx[22m
+[2m7:02:48 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mC:/nif/mangment/src/components/TrainingIntelligence/TrainingIntelligenceApp.tsx[22m
+[2m7:03:03 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mC:/nif/mangment/src/components/TrainingIntelligence/TrainingIntelligenceApp.tsx[22m
+[2m7:03:37 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mC:/nif/mangment/src/components/TrainingIntelligence/TrainingIntelligenceApp.tsx[22m
+[2m7:04:01 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mC:/nif/mangment/src/components/TrainingIntelligence/TrainingIntelligenceApp.tsx[22m
