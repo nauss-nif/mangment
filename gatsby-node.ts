@@ -117,6 +117,13 @@ export const onCreateWebpackConfig: GatsbyNode['onCreateWebpackConfig'] = ({ sta
                     'Docs',
                     'OnboardingContentWrapper.tsx'
                 ),
+                'scenes/onboarding/shared/OnboardingDocsContentWrapper': path.resolve(
+                    __dirname,
+                    'src',
+                    'components',
+                    'Docs',
+                    'OnboardingContentWrapper.tsx'
+                ),
             },
         },
     })

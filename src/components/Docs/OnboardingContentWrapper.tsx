@@ -154,7 +154,7 @@ interface StepDefinition {
 
 // TODO: Consider consolidating with DocsComponents above - these interfaces are nearly identical
 // and both have index signatures. OnboardingComponents could extend DocsComponents or be removed.
-interface OnboardingComponents {
+export interface OnboardingComponentsContext {
     Steps: MDXComponent
     Step: MDXComponent
     CodeBlock: React.ComponentType<CodeBlockWrapperProps>
@@ -171,13 +171,13 @@ interface InstallationProps {
     modifySteps?: (steps: StepDefinition[]) => StepDefinition[]
 }
 
-export const createInstallation = (getSteps: (ctx: OnboardingComponents) => StepDefinition[]) => {
+export const createInstallation = (getSteps: (ctx: OnboardingComponentsContext) => StepDefinition[]) => {
     return function Installation({ modifySteps }: InstallationProps) {
         const allComponents = useMDXComponents()
 
         // Wrap components in a proxy that returns UnknownComponent for missing keys
         // This prevents runtime errors when upstream monorepo adds new components we don't have
-        const safeComponents = new Proxy(allComponents as OnboardingComponents, {
+        const safeComponents = new Proxy(allComponents as OnboardingComponentsContext, {
             get(target, prop: string) {
                 const value = target[prop]
                 if (value !== undefined) {
